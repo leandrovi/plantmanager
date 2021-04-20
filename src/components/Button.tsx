@@ -10,13 +10,13 @@ import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 
 interface ButtonProps extends TouchableOpacityProps {
-  title?: string;
+  title: string;
 }
 
 export function Button({ title, ...rest }: ButtonProps) {
   return (
     <TouchableOpacity style={styles.container} {...rest}>
-      <Text style={styles.text}>Confirmar</Text>
+      <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
 }
